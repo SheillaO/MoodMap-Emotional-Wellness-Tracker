@@ -126,4 +126,45 @@ export const catsData = [
         affirmation: "Tomorrow is a new day.",
         source: "cat"
     },
+  {
+        emotionTags: ["moody"],
+        isGif: true,
+        image: "angry.gif",
+        alt: "A cat looking moody",
+        severity: "medium",
+        affirmation: "Breathe through this feeling.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["happy"],
+        isGif: true,
+        image: "happy.gif",
+        alt: "A cat looking happy",
+        severity: "positive",
+        affirmation: "You deserve this happiness!",
+        source: "cat"
+    },
+      // ========== SNL MEMES (NEW - ADD YOUR GIFS HERE) ==========
+    // Download your SNL GIFs and place them in ./images/snl/
+    // Then uncomment and update the image filenames below
+    
+    // MOODY
+    {
+        emotionTags: ["moody"],
+        isGif: true,
+        image: "snl/stefon-disappointed.gif", // Replace with your actual filename
+        alt: "SNL Stefon looking disappointed",
+        severity: "medium",
+        affirmation: "Even Stefon has off days.",
+        source: "snl"
+    },
+    {
+        emotionTags: ["moody", "dominant"],
+        isGif: true,
+        image: "snl/kate-eyeroll.gif", // Replace with your actual filename
+        alt: "SNL character eye roll moment",
+        severity: "medium",
+        affirmation: "Sometimes you just need to roll your eyes and move on.",
+        source: "snl"
+    },
     
