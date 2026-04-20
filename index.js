@@ -188,4 +188,110 @@ function deleteEntry(index) {
   renderMoodHistory();
   updateMoodStats();
 }
+// ========== NEW FUNCTION 5: Update Stats Dashboard ==========
+function updateMoodStats() {
+    const history = getMoodHistory()
+    
+    if (history.length === 0) {
+        statsContainer.innerHTML = '<p class="empty-state">Start tracking to see your patterns.</p>'
+        return
+    }
+    
+    const totalEntries = history.length
+    const emotionCounts = countEmotions(history)
+    const mostCommonEmotion = getMostCommonEmotion(emotionCounts)
+    const streak = getCurrentStreak(history)
+    const concerningPattern = detectConcerningPattern(history)
+    
+    statsContainer.innerHTML = `
+        <div class="stat-card">
+            <div class="stat-number">${totalEntries}</div>
+            <div class="stat-label">Total Check-ins</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">${mostCommonEmotion}</div>
+            <div class="stat-label">Most Common</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">${streak}</div>
+            <div class="stat-label">Day Streak</div>
+        </div>
+        ${concerningPattern ? `
+            <div class="stat-card warning">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-label">${concerningPattern}</div>
+            </div>
+        ` : ''}
+    `
+}
 
+// ========== NEW FUNCTION 6: Count Emotions ==========
+function countEmotions(history) {
+    const counts = {}
+    
+    for (let entry of history) {
+        if (counts[entry.emotion]) {
+            counts[entry.emotion]++
+        } else {
+            counts[entry.emotion] = 1
+        }
+    }
+    
+    return counts
+}
+
+// ========== NEW FUNCTION 7: Get Most Common Emotion ==========
+function getMostCommonEmotion(emotionCounts) {
+    let maxCount = 0
+    let mostCommon = 'None'
+    
+    for (let emotion in emotionCounts) {
+        if (emotionCounts[emotion] > maxCount) {
+            maxCount = emotionCounts[emotion]
+            mostCommon = emotion
+        }
+    }
+    
+    return mostCommon
+}
+
+// ========== NEW FUNCTION 8: Calculate Streak ==========
+function getCurrentStreak(history) {
+    if (history.length === 0) return 0
+    
+    const today = new Date().toLocaleDateString()
+    const lastEntry = history[history.length - 1].date
+    
+    if (lastEntry !== today) return 0
+    
+    let streak = 1
+    const uniqueDates = [...new Set(history.map(entry => entry.date))]
+    
+    return uniqueDates.length
+}
+
+// ========== NEW FUNCTION 9: Detect Concerning Patterns ==========
+function detectConcerningPattern(history) {
+    const last7 = history.slice(-7)
+    
+    // Check for 5+ sad/scared entries in last 7
+    const negativeMoods = last7.filter(entry => 
+        entry.emotion === 'sad' || 
+        entry.emotion === 'scared' || 
+        entry.emotion === 'moody'
+    )
+    
+    if (negativeMoods.length >= 5) {
+        return "Consider talking to someone"
+    }
+    
+    // Check for 3+ insomniac in last 5
+    const last5 = history.slice(-5)
+    const insomniaCount = last5.filter(entry => entry.emotion === 'insomniac').length
+    
+    if (insomniaCount >= 3) {
+        return "Sleep pattern concerns detected"
+    }
+    
+    return null
+}
