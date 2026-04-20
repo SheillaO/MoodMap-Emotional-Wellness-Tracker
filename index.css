@@ -120,3 +120,13 @@ main { max-width: 560px; margin: 0 auto; padding: 20px; }
     flex-direction: column;
     align-items: center;
 }
+.cat-img { max-width: 100%; border-radius: 10px; margin-bottom: 14px; }
+.affirmation { text-align: center; font-size: 15px; font-weight: 600; color: var(--tomato); margin: 12px 0; }
+.meme-modal-close-btn { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 22px; cursor: pointer; color: #aaa; }
+.save-note-btn { padding: 10px 24px; background: var(--mv); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; }
+.save-note-btn:hover { background: #3d0025; }
+
+@media (max-width: 600px) {
+    #stats-container { grid-template-columns: repeat(2, 1fr); }
+    .meme-modal { width: 90%; }
+}
