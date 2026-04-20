@@ -128,3 +128,40 @@ This project is part of a broader portfolio demonstrating full-stack product dev
 Healthcare utility — Semaglutide/Tirzepatide dose conversion tool for 40M+ users on weight-loss medications  
 *Tech: Vanilla JS, LocalStorage, FormData API*
  
+ **🌊 [Bahari Leads](https://github.com/SheillaO/Bahari-Leads)**  
+B2B SaaS — Lead management Chrome extension for emerging markets  
+*Tech: Chrome Extension API, LocalStorage, B2B go-to-market positioning*
+ 
+**🔐 [GDPR Consent Manager](https://github.com/SheillaO/GDPR-Consent-Fatigue)**  
+Privacy compliance — Track and manage digital consent across websites in one interface  
+*Tech: Chrome Extension API, cookie management, GDPR Article 7 compliance*
+ 
+**🔑 [AI-Proof Password Generator](https://github.com/SheillaO/AI-Proof-Password-Generator)**  
+Security tool — Cryptographically secure passwords designed to resist LLM pattern recognition  
+*Tech: Web Crypto API, competitive positioning vs AI-generated credentials*
+ 
+**🎨 [OldGram](https://github.com/SheillaO/Instagram-Clone)**  
+Social media — Instagram clone with "New to You" filter and sentiment analysis  
+*Tech: Advanced DOM manipulation, localStorage, event handling*
+ 
+**Common thread:** Product-first thinking applied to technical implementation. Each project addresses a real market gap with measurable user outcomes.
+ 
+---
+ 
+## Market Opportunity
+ 
+### Target Segments
+ 
+**Primary:** Global mental health tracking market  
+- 264M people with depression globally (WHO, 2024)
+- $56B annual economic impact
+- 70% don't track emotional patterns
+**Secondary:** Student wellness market  
+- 73% of college students report anxiety (APA, 2024)
+- Zero budget for premium mental health apps
+- High smartphone penetration
+**Tertiary:** Emerging markets (Kenya, Nigeria focus)  
+- 800K+ diagnosed depression cases in Kenya alone
+- 76% distrust cloud mental health apps (2024 study)
+- Privacy-first architecture addresses cultural concerns
+
