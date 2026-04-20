@@ -214,3 +214,13 @@ export const catsData = [
         affirmation: "Sleep will come. Try to rest your mind first.",
         source: "snl"
     },
+      {
+        emotionTags: ["insomniac", "moody"],
+        isGif: true,
+        image: "snl/zombie-morning.gif", // Replace with your actual filename
+        alt: "SNL morning zombie mode",
+        severity: "high",
+        affirmation: "Coffee exists for a reason.",
+        source: "snl"
+    },
+    
