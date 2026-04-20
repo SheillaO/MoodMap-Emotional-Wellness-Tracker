@@ -134,6 +134,7 @@ function saveMoodEntry(catObject) {
     emotion: selectedEmotion,
     severity: catObject.severity,
     image: catObject.image,
+    source: catObject.source,
     date: new Date().toLocaleDateString(),
     time: new Date().toLocaleTimeString(),
     timestamp: Date.now(),
