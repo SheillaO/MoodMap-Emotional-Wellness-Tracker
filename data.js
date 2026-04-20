@@ -3,7 +3,7 @@ export const catsData = [
   {
     emotionTags: ["moody"],
     isGif: false,
-    image: "angry.jpeg",
+    Image: "angry.jpeg",
     alt: "A cat looking moody",
     severity: "medium",
     affirmation: "It's okay to feel moody. This will pass.",
@@ -152,7 +152,7 @@ export const catsData = [
   {
     emotionTags: ["moody"],
     isGif: true,
-    image: "snl/stefon-disappointed.gif", // Replace with your actual filename
+    image: "snl-stefon-disappointed.gif", 
     alt: "SNL Stefon looking disappointed",
     severity: "medium",
     affirmation: "Even Stefon has off days.",
@@ -161,7 +161,7 @@ export const catsData = [
   {
     emotionTags: ["moody", "dominant"],
     isGif: true,
-    image: "snl/kate-eyeroll.gif", // Replace with your actual filename
+    image: "snl-kate-eyeroll.gif", 
     alt: "SNL character eye roll moment",
     severity: "medium",
     affirmation: "Sometimes you just need to roll your eyes and move on.",
@@ -170,7 +170,7 @@ export const catsData = [
   {
     emotionTags: ["confused"],
     isGif: true,
-    image: "snl/what-is-happening.gif", // Replace with your actual filename
+    image: "snl-what-is-happening.gif", 
     alt: "SNL confused reaction",
     severity: "medium",
     affirmation: "Not knowing is the first step to knowing.",
@@ -180,7 +180,7 @@ export const catsData = [
   {
     emotionTags: ["confused", "scared"],
     isGif: true,
-    image: "snl/weekend-update-confused.gif", // Replace with your actual filename
+    image: "snl-weekend-update-confused.gif",
     alt: "Weekend Update confused moment",
     severity: "medium",
     affirmation: "The world is confusing. You're doing fine.",
@@ -190,7 +190,7 @@ export const catsData = [
   {
     emotionTags: ["happy"],
     isGif: true,
-    image: "snl/dance-celebration.gif", // Replace with your actual filename
+    image: "snl-dance-celebration.gif", 
     alt: "SNL celebration dance",
     severity: "positive",
     affirmation: "Dance it out!",
@@ -199,7 +199,7 @@ export const catsData = [
   {
     emotionTags: ["happy", "relaxed"],
     isGif: true,
-    image: "snl/good-vibes.gif", // Replace with your actual filename
+    image: "snl-good-vibes.gif", 
     alt: "SNL good vibes moment",
     severity: "positive",
     affirmation: "Ride this wave of good vibes.",
@@ -208,8 +208,7 @@ export const catsData = [
   {
     emotionTags: ["insomniac"],
     isGif: true,
-    image: "snl/havent-slept.gif", // Replace with your actual filename
-    alt: "SNL sleep deprived character",
+    image: "snl-havent-slept.gif", 
     severity: "high",
     affirmation: "Sleep will come. Try to rest your mind first.",
     source: "snl",
@@ -217,8 +216,7 @@ export const catsData = [
   {
     emotionTags: ["insomniac", "moody"],
     isGif: true,
-    image: "snl/zombie-morning.gif", // Replace with your actual filename
-    alt: "SNL morning zombie mode",
+    image: "snl-zombie-morning.gif", 
     severity: "high",
     affirmation: "Coffee exists for a reason.",
     source: "snl",
@@ -227,7 +225,7 @@ export const catsData = [
   {
     emotionTags: ["scared"],
     isGif: true,
-    image: "snl/im-scared.gif", // Replace with your actual filename
+    image: "snl-im-scared.gif", 
     alt: "SNL scared reaction",
     severity: "medium",
     affirmation: "Acknowledging fear is courage.",
@@ -236,8 +234,7 @@ export const catsData = [
   {
     emotionTags: ["scared", "confused"],
     isGif: true,
-    image: "snl/panic-mode.gif", // Replace with your actual filename
-    alt: "SNL panic moment",
+    image: "snl-panic-mode.gif", 
     severity: "high",
     affirmation: "Take it one breath at a time.",
     source: "snl",
@@ -245,7 +242,7 @@ export const catsData = [
   {
     emotionTags: ["sad"],
     isGif: true,
-    image: "snl/debbie-downer.gif", // Replace with your actual filename
+    image: "snl-debbie-downer.gif", 
     alt: "SNL Debbie Downer moment",
     severity: "high",
     affirmation: "Sadness is temporary. This feeling will shift.",
@@ -254,7 +251,7 @@ export const catsData = [
   {
     emotionTags: ["sad", "moody"],
     isGif: true,
-    image: "snl/crying-sketch.gif", // Replace with your actual filename
+    image: "snl-crying-sketch.gif", 
     alt: "SNL emotional moment",
     severity: "high",
     affirmation: "It's okay to not be okay right now.",
@@ -263,7 +260,7 @@ export const catsData = [
   {
     emotionTags: ["relaxed"],
     isGif: true,
-    image: "snl/chill-vibes.gif", // Replace with your actual filename
+    image: "snl-chill-vibes.gif", 
     alt: "SNL relaxed character",
     severity: "positive",
     affirmation: "You've earned this calm.",
@@ -274,7 +271,7 @@ export const catsData = [
   {
     emotionTags: ["hungry"],
     isGif: true,
-    image: "snl/food-obsessed.gif", // Replace with your actual filename
+    image: "snl-food-obsessed.gif", 
     alt: "SNL hungry character",
     severity: "low",
     affirmation: "Feed yourself. You deserve good food.",
