@@ -4,6 +4,7 @@ A privacy-first mental health tracking application that reduces the friction bet
 
 <img width="1863" height="867" alt="Moodmap" src="https://github.com/user-attachments/assets/bd85e92a-22bd-4242-b9da-3d9b8864e6c8" />
 
+<br>
  
 [**🚀 Explore the Live Demo**](https://moodmapemotionalwellnesstracker.netlify.app/) | [**📂 View Codebase**](https://github.com/SheillaO/MoodMap-Emotional-Wellness-Tracker)
 
