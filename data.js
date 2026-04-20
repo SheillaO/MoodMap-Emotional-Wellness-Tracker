@@ -186,3 +186,22 @@ export const catsData = [
         affirmation: "The world is confusing. You're doing fine.",
         source: "snl"
     },
+
+      {
+        emotionTags: ["happy"],
+        isGif: true,
+        image: "snl/dance-celebration.gif", // Replace with your actual filename
+        alt: "SNL celebration dance",
+        severity: "positive",
+        affirmation: "Dance it out!",
+        source: "snl"
+    },
+       {
+        emotionTags: ["happy", "relaxed"],
+        isGif: true,
+        image: "snl/good-vibes.gif", // Replace with your actual filename
+        alt: "SNL good vibes moment",
+        severity: "positive",
+        affirmation: "Ride this wave of good vibes.",
+        source: "snl"
+    },
