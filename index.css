@@ -186,13 +186,30 @@ footer {
   text-align: center;
   padding: 40px 20px;
   background: var(--mv); 
-  color: white; 
+  color: white;
+  margin-top: 50px; /* Adds breathing room from the content above */
 }
 
 footer p {
-  color: var(--saffron);
+  color: white; /* Base text in white */
   font-size: 14px;
+  opacity: 0.8; /* Makes it look slightly softer */
 }
+
+/* Style the links inside the footer */
+footer a {
+  color: var(--saffron); /* Use saffron for the links only */
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 5px;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
 
 @media (max-width: 600px) {
     #stats-container { grid-template-columns: repeat(2, 1fr); }
