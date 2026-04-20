@@ -223,4 +223,33 @@ export const catsData = [
         affirmation: "Coffee exists for a reason.",
         source: "snl"
     },
+
+        {
+        emotionTags: ["scared"],
+        isGif: true,
+        image: "snl/im-scared.gif", // Replace with your actual filename
+        alt: "SNL scared reaction",
+        severity: "medium",
+        affirmation: "Acknowledging fear is courage.",
+        source: "snl"
+    },
+    {
+        emotionTags: ["scared", "confused"],
+        isGif: true,
+        image: "snl/panic-mode.gif", // Replace with your actual filename
+        alt: "SNL panic moment",
+        severity: "high",
+        affirmation: "Take it one breath at a time.",
+        source: "snl"
+    },
+        {
+        emotionTags: ["sad"],
+        isGif: true,
+        image: "snl/debbie-downer.gif", // Replace with your actual filename
+        alt: "SNL Debbie Downer moment",
+        severity: "high",
+        affirmation: "Sadness is temporary. This feeling will shift.",
+        source: "snl"
+    },
     
+
