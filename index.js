@@ -92,3 +92,46 @@ function getMatchingCatsArray() {
   }
 }
 
+function getEmotionsArray(cats){
+    const emotionsArray = []    
+    for (let cat of cats){
+        for (let emotion of cat.emotionTags){
+            if (!emotionsArray.includes(emotion)){
+                emotionsArray.push(emotion)
+            }
+        }
+    }
+    return emotionsArray
+}
+
+function renderEmotionsRadios(cats){
+    let radioItems = ``
+    const emotions = getEmotionsArray(cats)
+    for (let emotion of emotions){
+        radioItems += `
+        <div class="radio">
+            <label for="${emotion}">${emotion}</label>
+            <input
+            type="radio"
+            id="${emotion}"
+            value="${emotion}"
+            name="emotions"
+            >
+        </div>`
+    }
+    emotionRadios.innerHTML = radioItems
+}
+
+// ========== NEW FUNCTION 1: Save Mood Entry ==========
+function saveMoodEntry(catObject) {
+    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+    
+    const entry = {
+        emotion: selectedEmotion,
+        severity: catObject.severity,
+        image: catObject.image,
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
+        timestamp: Date.now(),
+        note: "" // User can add notes later
+    }
