@@ -176,3 +176,43 @@ Social media — Instagram clone with "New to You" filter and sentiment analysis
 | Paper journals | Free | Low adherence | Digital convenience + gamification |
  
 ---
+
+## Technical Roadmap
+ 
+### Phase 1: Content Expansion ✅
+- [x] Cat meme database
+- [x] SNL cultural references
+- [ ] User-uploaded custom content
+- [ ] Multi-language affirmations
+### Phase 2: Advanced Analytics
+- [ ] Heatmap calendar visualization (D3.js)
+- [ ] Correlation detection (sleep vs mood patterns)
+- [ ] ML-powered trigger identification (TensorFlow.js)
+- [ ] LLM-generated personalized affirmations (Anthropic API)
+### Phase 3: Clinical Integration
+- [ ] Therapist dashboard (B2B SaaS pivot)
+- [ ] HL7 FHIR export standard
+- [ ] Anonymous aggregate data sharing (differential privacy)
+### Phase 4: Platform Expansion
+- [ ] Progressive Web App (service workers for offline)
+- [ ] React Native mobile app
+- [ ] API for third-party health app integrations
+---
+ 
+## Installation
+ 
+```bash
+git clone https://github.com/SheillaO/MoodMap.git
+cd MoodMap
+open index.html
+```
+ 
+**No build process.** No npm dependencies. Works immediately.
+ 
+For local server (optional):
+```bash
+python3 -m http.server 8000
+# Navigate to localhost:8000
+```
+ 
+---
