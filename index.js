@@ -124,14 +124,68 @@ function renderEmotionsRadios(cats){
 
 // ========== NEW FUNCTION 1: Save Mood Entry ==========
 function saveMoodEntry(catObject) {
-    const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-    
-    const entry = {
-        emotion: selectedEmotion,
-        severity: catObject.severity,
-        image: catObject.image,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-        timestamp: Date.now(),
-        note: "" // User can add notes later
-    }
+  const selectedEmotion = document.querySelector(
+    'input[type="radio"]:checked',
+  ).value;
+
+  const entry = {
+    emotion: selectedEmotion,
+    severity: catObject.severity,
+    image: catObject.image,
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+    timestamp: Date.now(),
+    note: "", // User can add notes later
+  };
+
+  let moodHistory = getMoodHistory();
+  moodHistory.push(entry);
+  localStorage.setItem("moodHistory", JSON.stringify(moodHistory));
+
+  renderMoodHistory();
+}
+
+// ========== NEW FUNCTION 2: Get Mood History ==========
+function getMoodHistory() {
+  return JSON.parse(localStorage.getItem("moodHistory")) || [];
+}
+
+// ========== NEW FUNCTION 3: Render Mood History ==========
+function renderMoodHistory() {
+  const history = getMoodHistory();
+
+  if (history.length === 0) {
+    moodHistoryContainer.innerHTML =
+      '<p class="empty-state">No mood entries yet. Track your first emotion!</p>';
+    return;
+  }
+
+  // Show last 7 entries
+  const recentEntries = history.slice(-7).reverse();
+
+  moodHistoryContainer.innerHTML = recentEntries
+    .map(
+      (entry, index) => `
+        <div class="mood-card ${entry.severity}">
+            <img src="./images/${entry.image}" class="mood-thumb" alt="${entry.emotion}">
+            <div class="mood-info">
+                <strong>${entry.emotion}</strong>
+                <span class="mood-date">${entry.date} at ${entry.time}</span>
+                ${entry.note ? `<p class="mood-note">${entry.note}</p>` : ""}
+            </div>
+            <button class="delete-entry" onclick="deleteEntry(${history.length - 1 - index})">✕</button>
+        </div>
+    `,
+    )
+    .join("");
+}
+
+// ========== NEW FUNCTION 4: Delete Entry ==========
+function deleteEntry(index) {
+  let history = getMoodHistory();
+  history.splice(index, 1);
+  localStorage.setItem("moodHistory", JSON.stringify(history));
+  renderMoodHistory();
+  updateMoodStats();
+}
+
