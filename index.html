@@ -44,3 +44,17 @@
                 </div>
                 <button class="get-image-btn" id="get-image-btn">Log Mood</button>
                 </div>
+
+                <!-- Mood History -->
+                <section class="history-section">
+                    <div class="section-header">
+                        <h3>Recent Check-ins</h3>
+                        <div class="export-buttons">
+                            <button onclick="exportAsCSV()" class="export-btn">Export CSV</button>
+                            <button onclick="exportAsJSON()" class="export-btn">Export JSON</button>
+                            <button onclick="clearAllData()" class="clear-btn">Clear All</button>
+                        </div>
+                    </div>
+                    <div id="mood-history"></div>
+                </section>
+                </main>
