@@ -176,3 +176,13 @@ export const catsData = [
         affirmation: "Not knowing is the first step to knowing.",
         source: "snl"
     },
+
+      {
+        emotionTags: ["confused", "scared"],
+        isGif: true,
+        image: "snl/weekend-update-confused.gif", // Replace with your actual filename
+        alt: "Weekend Update confused moment",
+        severity: "medium",
+        affirmation: "The world is confusing. You're doing fine.",
+        source: "snl"
+    },
