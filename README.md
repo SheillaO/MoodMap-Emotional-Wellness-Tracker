@@ -165,3 +165,14 @@ Social media — Instagram clone with "New to You" filter and sentiment analysis
 - 76% distrust cloud mental health apps (2024 study)
 - Privacy-first architecture addresses cultural concerns
 
+### Competitive Analysis
+ 
+| Solution | Cost | Limitation | MoodMap Advantage |
+|----------|------|------------|-------------------|
+| Headspace | $70/yr | Paywall after trial | Free forever |
+| Calm | $70/yr | Meditation-only | Mood tracking focus |
+| Moodpath | Free (ads) | Clinical UI | Engaging visual interface |
+| Daylio | Freemium | No emotional context | Meme-based mapping |
+| Paper journals | Free | Low adherence | Digital convenience + gamification |
+ 
+---
