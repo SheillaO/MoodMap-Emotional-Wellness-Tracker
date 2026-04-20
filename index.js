@@ -10,19 +10,85 @@ const moodHistoryContainer = document.getElementById("mood-history");
 const statsContainer = document.getElementById("stats-container");
 
 // ========== EXISTING FUNCTIONS (Your Original Code) ==========
-emotionRadios.addEventListener('change', highlightCheckedOption)
-memeModalCloseBtn.addEventListener('click', closeModal)
-getImageBtn.addEventListener('click', renderCat)
+emotionRadios.addEventListener("change", highlightCheckedOption);
+memeModalCloseBtn.addEventListener("click", closeModal);
+getImageBtn.addEventListener("click", renderCat);
 
-function highlightCheckedOption(e){
-    const radios = document.getElementsByClassName('radio')
-    for (let radio of radios){
-        radio.classList.remove('highlight')
-    }
-    document.getElementById(e.target.id).parentElement.classList.add('highlight')
+function highlightCheckedOption(e) {
+  const radios = document.getElementsByClassName("radio");
+  for (let radio of radios) {
+    radio.classList.remove("highlight");
+  }
+  document.getElementById(e.target.id).parentElement.classList.add("highlight");
 }
 
-function closeModal(){
-    memeModal.style.display = 'none'
+function closeModal() {
+  memeModal.style.display = "none";
+}
+
+function renderCat() {
+  const catObject = getSingleCatObject();
+
+  // NEW: Save mood entry when user gets image
+  saveMoodEntry(catObject);
+
+  memeModalInner.innerHTML = `
+        <img 
+        class="cat-img" 
+        src="./images/${catObject.image}"
+        alt="${catObject.alt}"
+        >
+        <p class="affirmation">${catObject.affirmation}</p>
+        <button class="save-note-btn" onclick="addNote()" class="save-note-btn">Add Note</button>
+    `;
+  memeModal.style.display = "flex";
+
+  // NEW: Update stats after each entry
+  updateMoodStats();
+}
+
+function getSingleCatObject() {
+  const catsArray = getMatchingCatsArray();
+
+  if (catsArray.length === 1) {
+    return catsArray[0];
+  } else {
+    const randomNumber = Math.floor(Math.random() * catsArray.length);
+    return catsArray[randomNumber];
+  }
+}
+
+function getMatchingCatsArray() {
+  // 1. Check if an emotion is selected first to avoid errors
+  const selectedEmotionEl = document.querySelector(
+    'input[name="emotions"]:checked',
+  );
+
+  if (selectedEmotionEl) {
+    const selectedEmotion = selectedEmotionEl.value;
+    const isGif = gifsOnlyOption.checked;
+
+    // 2. Get the newly selected source (make sure these exist in your HTML!)
+    const selectedSource = document.querySelector(
+      'input[name="source"]:checked',
+    ).value;
+
+    // 3. Filter catsData using all three criteria
+    const matchingCatsArray = catsData.filter(function (cat) {
+      const emotionMatch = cat.emotionTags.includes(selectedEmotion);
+
+      // If isGif is true, cat.isGif must be true. If isGif is false, return true.
+      const gifMatch = isGif ? cat.isGif : true;
+
+      let sourceMatch = true;
+      if (selectedSource !== "both") {
+        sourceMatch = cat.source === selectedSource;
+      }
+
+      return emotionMatch && gifMatch && sourceMatch;
+    });
+
+    return matchingCatsArray;
+  }
 }
 
