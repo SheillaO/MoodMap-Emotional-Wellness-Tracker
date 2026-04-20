@@ -56,3 +56,24 @@ main { max-width: 560px; margin: 0 auto; padding: 20px; }
 .radio label { flex: 1; font-size: 14px; cursor: pointer; }
 .highlight { background: #fff5ec; }
 .highlight label { color: var(--tomato); font-weight: 600; }
+
+/* Gif check */
+.gifs-check { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.gifs-check input { accent-color: var(--tomato); }
+.gifs-check-label { font-size: 13px; color: #666; }
+
+/* Log button */
+.get-image-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--tomato);
+    color: white;
+    border: none;
+    border-radius: var(--r);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: background 0.15s;
+}
+.get-image-btn:hover { background: #a33a28; }
