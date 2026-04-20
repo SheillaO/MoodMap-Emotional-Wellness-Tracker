@@ -16,11 +16,6 @@ body {
 }
 
 /* Header */
-header h1, 
-header h2 {
-    color: white;
-}
-
 header {
     background: var(--mv);
     padding: 18px 24px;
@@ -29,12 +24,12 @@ header {
     gap: 14px;
 }
 
-/* Hero / Why Section */
 .hero-section {
-    background: var(--alice);
+    background: var(--mv); /* Changes background to dark purple */
     padding: 28px 24px;
     border-bottom: 3px solid var(--saffron);
 }
+
 .hero-inner {
     max-width: 680px;
     margin: 0 auto;
@@ -42,17 +37,12 @@ header {
     flex-direction: column;
     gap: 10px;
 }
-.hero-why {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--saffron);
-    line-height: 1.4;
-}
 .hero-what {
     font-size: 14px;
-    color: var(--tomato);
+    color: rgba(255,255,255,0.75); 
     line-height: 1.7;
 }
+
 .hero-how {
     font-size: 13px;
     font-weight: 600;
