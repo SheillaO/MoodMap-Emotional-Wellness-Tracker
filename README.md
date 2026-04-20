@@ -216,3 +216,58 @@ python3 -m http.server 8000
 ```
  
 ---
+
+## Architecture Benefits
+ 
+**For recruiters evaluating technical depth:**
+ 
+✅ **Vanilla JavaScript mastery** — Array methods, data structures, algorithmic thinking  
+✅ **Product thinking** — Market research, competitive analysis, user validation  
+✅ **Privacy-first design** — GDPR compliance, client-side storage architecture  
+✅ **Clinical applicability** — Export formats designed for real therapist workflows  
+✅ **Scalability awareness** — Modular data schema supports SNL/custom content taxonomy  
+✅ **Global market consideration** — Offline-first for emerging market connectivity constraints
+ 
+**For developers considering contributions:**
+ 
+- Clean code structure with function documentation
+- No framework lock-in — pure web standards
+- Extensible data schema for custom emotion taxonomies
+- Export API ready for third-party integrations
+---
+ 
+## Data Privacy
+ 
+All mood data persists exclusively in browser `localStorage`. Zero server-side storage means:
+- No data breach risk
+- No GDPR Article 13 disclosure requirements (data never leaves device)
+- No surveillance capitalism concerns
+- User maintains complete data sovereignty
+Export features generate files client-side using Blob API — no upload to external servers.
+ 
+---
+ 
+## License
+ 
+MIT License — Open source because mental health tools should be accessible and forkable.
+ 
+---
+
+**Sheilla O.**  
+Product-Minded Developer | Nairobi, Kenya 🇰🇪
+ 
+Building at the intersection of healthcare, privacy, and developer tools.
+ 
+📧 [Email](mailto:your.email@example.com) • 💼 [LinkedIn](https://linkedin.com/in/yourprofile) • 🐙 [GitHub](https://github.com/SheillaO)
+ 
+---
+ 
+## Acknowledgments
+ 
+- **264M people globally** experiencing depression — the ultimate validation for building this
+- **Scrimba** for the foundational cat meme picker tutorial that sparked product thinking
+- **Beta testers in Nairobi** for validating the meme-based emotional mapping hypothesis
+- **Therapists** who requested CSV export functionality and validated clinical utility
+---
+ 
+*MoodMap: Because consistent self-awareness shouldn't require a subscription.*
