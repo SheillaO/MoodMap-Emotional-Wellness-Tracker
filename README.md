@@ -2,9 +2,8 @@
  
 A privacy-first mental health tracking application that reduces the friction between awareness and action. Built with vanilla JavaScript to demonstrate core web fundamentals and product thinking.
  
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://moodmap.netlify.app)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
- 
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://moodmapemotionalwellnesstracker.netlify.app/)
+
 ---
 
 ## Problem Statement
@@ -258,7 +257,7 @@ Product-Minded Developer | Nairobi, Kenya 🇰🇪
  
 Building at the intersection of healthcare, privacy, and developer tools.
  
-📧 [Email](mailto:your.email@example.com) • 💼 [LinkedIn](https://linkedin.com/in/yourprofile) • 🐙 [GitHub](https://github.com/SheillaO)
+💼 [LinkedIn](https://www.linkedin.com/in/sheillaolga/) • 🐙 [GitHub](https://github.com/SheillaO/MoodMap-Emotional-Wellness-Tracker)
  
 ---
  

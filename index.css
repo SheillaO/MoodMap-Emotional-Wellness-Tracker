@@ -182,6 +182,12 @@ main { max-width: 560px; margin: 0 auto; padding: 20px; }
 .save-note-btn { padding: 10px 24px; background: var(--mv); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; }
 .save-note-btn:hover { background: #3d0025; }
 
+footer {
+  text-align: center;
+  color: var(--saffron);
+  background: var(--bone);
+}
+
 @media (max-width: 600px) {
     #stats-container { grid-template-columns: repeat(2, 1fr); }
     .meme-modal { width: 90%; }
