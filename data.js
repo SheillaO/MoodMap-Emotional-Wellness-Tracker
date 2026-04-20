@@ -167,4 +167,12 @@ export const catsData = [
         affirmation: "Sometimes you just need to roll your eyes and move on.",
         source: "snl"
     },
-    
+        {
+        emotionTags: ["confused"],
+        isGif: true,
+        image: "snl/what-is-happening.gif", // Replace with your actual filename
+        alt: "SNL confused reaction",
+        severity: "medium",
+        affirmation: "Not knowing is the first step to knowing.",
+        source: "snl"
+    },
