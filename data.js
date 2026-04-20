@@ -18,3 +18,21 @@ export const catsData = [
         affirmation: "You're not alone in feeling this way.",
         source: "cat"
     },
+       {
+        emotionTags: ["moody"],
+        isGif: false,
+        image: "angry3.jpeg",
+        alt: "A cat looking moody",
+        severity: "medium",
+        affirmation: "Take a deep breath. You've got this.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["confused", "sad"],
+        isGif: false,
+        image: "confused.jpeg",
+        alt: "A cat looking confused",
+        severity: "medium",
+        affirmation: "Confusion is part of growth.",
+        source: "cat"
+    },
