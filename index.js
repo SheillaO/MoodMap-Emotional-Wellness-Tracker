@@ -1,4 +1,4 @@
-import { catsData } from "/.data.js";
+import { catsData } from "./data.js";
 
 const emotionRadios = document.getElementById("emotion-radios");
 const getImageBtn = document.getElementById("get-image-btn");
@@ -48,10 +48,6 @@ function renderCat() {
   document.getElementById("add-note-btn").addEventListener("click", addNote);
   updateMoodStats();
 }
-
-
-
-
 
 function getSingleCatObject() {
   const catsArray = getMatchingCatsArray();
@@ -184,8 +180,6 @@ function renderMoodHistory() {
     })
     .join("");
 }
-
-
 
 // ========== NEW FUNCTION 4: Delete Entry ==========
 function deleteEntry(index) {
@@ -418,19 +412,44 @@ function calculateAverageSeverity(entries) {
   return entries.length > 0 ? (total / entries.length).toFixed(1) : 0;
 }
 
+function getMoodHistory() {
+  return JSON.parse(localStorage.getItem("moodHistory") || "[]");
+}
+
+function addNote() {
+  const note = prompt("Add a note about how you're feeling:");
+  if (note) {
+    let history = getMoodHistory();
+    history[history.length - 1].note = note;
+    localStorage.setItem("moodHistory", JSON.stringify(history));
+    renderMoodHistory();
+  }
+}
+
 // ========== INITIALIZE ON LOAD ==========
 renderEmotionsRadios(catsData);
 renderMoodHistory();
 updateMoodStats();
 
 // Make functions globally available
-window.deleteEntry = deleteEntry;
+// ========== INITIALIZE & GLOBAL ACCESS ==========
+
+// 1. Make all functions public for the HTML buttons
 window.exportAsCSV = exportAsCSV;
 window.exportAsJSON = exportAsJSON;
 window.clearAllData = clearAllData;
+window.deleteEntry = deleteEntry;
+window.addNote = addNote;
 
+// 2. Wait for the page to load, THEN build the list and history
 document.addEventListener("DOMContentLoaded", () => {
-  renderEmotionsRadios(catsData);
-  renderMoodHistory();
-  updateMoodStats();
+  if (catsData) {
+    renderEmotionsRadios(catsData);
+    renderMoodHistory();
+    updateMoodStats();
+  } else {
+    console.error(
+      "Data not found! Make sure your import at the top is correct.",
+    );
+  }
 });

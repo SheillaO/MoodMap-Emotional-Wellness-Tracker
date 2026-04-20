@@ -1,9 +1,9 @@
 export const catsData = [
-  // ========== CAT MEMES (EXISTING) ==========
+    
   {
     emotionTags: ["moody"],
     isGif: false,
-    Image: "angry.jpeg",
+    image: "angry.jpeg",
     alt: "A cat looking moody",
     severity: "medium",
     affirmation: "It's okay to feel moody. This will pass.",
