@@ -1,6 +1,9 @@
 # MoodMap — Emotional Wellness Tracker
  
 A privacy-first mental health tracking application that reduces the friction between awareness and action. Built with vanilla JavaScript to demonstrate core web fundamentals and product thinking.
+
+<img width="1863" height="867" alt="Moodmap" src="https://github.com/user-attachments/assets/bd85e92a-22bd-4242-b9da-3d9b8864e6c8" />
+
  
 [![Live Demo](https://img.shields.io/badge/demo-live-success)](https://moodmapemotionalwellnesstracker.netlify.app/)
 
