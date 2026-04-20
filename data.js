@@ -205,3 +205,12 @@ export const catsData = [
         affirmation: "Ride this wave of good vibes.",
         source: "snl"
     },
+        {
+        emotionTags: ["insomniac"],
+        isGif: true,
+        image: "snl/havent-slept.gif", // Replace with your actual filename
+        alt: "SNL sleep deprived character",
+        severity: "high",
+        affirmation: "Sleep will come. Try to rest your mind first.",
+        source: "snl"
+    },
