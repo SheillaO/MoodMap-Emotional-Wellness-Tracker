@@ -6,3 +6,24 @@
     --alice: #edf6f9;
     --r: 10px;
 }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--alice);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--mv);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.pumpkin-img { width: 52px; }
+h1 { font-size: 26px; font-weight: 800; color: var(--saffron); letter-spacing: -0.5px; }
+h2 { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 400; }
+h3 { font-size: 17px; font-weight: 600; color: var(--mv); margin-bottom: 12px; }
