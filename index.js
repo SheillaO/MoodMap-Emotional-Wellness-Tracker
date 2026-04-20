@@ -295,3 +295,52 @@ function detectConcerningPattern(history) {
     
     return null
 }
+// ========== NEW FUNCTION 10: Export Data as CSV ==========
+function exportAsCSV() {
+    const history = getMoodHistory()
+    
+    if (history.length === 0) {
+        alert('No data to export!')
+        return
+    }
+    
+    const headers = ['Date', 'Time', 'Emotion', 'Severity', 'Note']
+    const rows = history.map(entry => [
+        entry.date,
+        entry.time,
+        entry.emotion,
+        entry.severity,
+        entry.note || 'No note'
+    ])
+    
+    const csv = [headers, ...rows]
+        .map(row => row.join(','))
+        .join('\n')
+    
+    const blob = new Blob([csv], { type: 'text/csv' })
+    const link = document.createElement('a')
+    link.href = URL.createObjectURL(blob)
+    link.download = `moodmap-${new Date().toISOString().split('T')[0]}.csv`
+    link.click()
+}
+
+// ========== NEW FUNCTION 11: Export as JSON ==========
+function exportAsJSON() {
+    const history = getMoodHistory()
+    const dataStr = JSON.stringify(history, null, 2)
+    const blob = new Blob([dataStr], { type: 'application/json' })
+    
+    const link = document.createElement('a')
+    link.href = URL.createObjectURL(blob)
+    link.download = `moodmap-${new Date().toISOString().split('T')[0]}.json`
+    link.click()
+}
+
+// ========== NEW FUNCTION 12: Clear All Data ==========
+function clearAllData() {
+    if (confirm('⚠️ This will delete all your mood history. Continue?')) {
+        localStorage.removeItem('moodHistory')
+        renderMoodHistory()
+        updateMoodStats()
+    }
+}
