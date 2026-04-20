@@ -17,3 +17,36 @@ Global mental health represents a $56B annual economic burden (Lancet, 2024), ye
 **MoodMap addresses this gap** with a free, offline-first architecture that uses visual emotional mapping to encourage consistent self-monitoring.
  
 ---
+
+## Technical Architecture
+ 
+### Core Technologies
+- **Vanilla JavaScript** — No framework dependencies; demonstrates fundamental language mastery
+- **LocalStorage API** — Client-side persistence; zero server infrastructure required
+- **Blob API** — CSV/JSON export functionality for clinical integration
+- **Web Crypto API** — Timestamp-based data integrity (planned Phase 2)
+### Key Features
+ 
+#### 1. Pattern Recognition Engine
+```javascript
+function detectConcerningPattern(history) {
+    const last7 = history.slice(-7)
+    const negativeMoods = last7.filter(entry => 
+        ['sad', 'scared', 'moody'].includes(entry.emotion)
+    )
+    
+    if (negativeMoods.length >= 5) {
+        return "Consider talking to someone"
+    }
+    
+    const insomniaCount = history.slice(-5).filter(
+        entry => entry.emotion === 'insomniac'
+    ).length
+    
+    if (insomniaCount >= 3) {
+        return "Sleep pattern concerns detected"
+    }
+    
+    return null
+}
+```
