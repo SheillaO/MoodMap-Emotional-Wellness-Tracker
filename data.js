@@ -54,3 +54,22 @@ export const catsData = [
         affirmation: "Celebrate this moment of joy!",
         source: "cat"
     },
+        {
+        emotionTags: ["hungry"],
+        isGif: false,
+        image: "hungry.jpeg",
+        alt: "A cat looking hungry",
+        severity: "low",
+        affirmation: "Time to nourish yourself.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["hungry"],
+        isGif: false,
+        image: "hungry1.jpeg",
+        alt: "A cat looking hungry",
+        severity: "low",
+        affirmation: "Your body is asking for care.",
+        source: "cat"
+    },
+    
