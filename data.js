@@ -36,3 +36,21 @@ export const catsData = [
         affirmation: "Confusion is part of growth.",
         source: "cat"
     },
+        {
+        emotionTags: ["dominant", "moody"],
+        isGif: false,
+        image: "dominant.jpeg",
+        alt: "A cat looking dominant",
+        severity: "low",
+        affirmation: "Channel that energy productively.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["happy", "relaxed"],
+        isGif: false,
+        image: "happy.jpeg",
+        alt: "A cat looking happy",
+        severity: "positive",
+        affirmation: "Celebrate this moment of joy!",
+        source: "cat"
+    },
