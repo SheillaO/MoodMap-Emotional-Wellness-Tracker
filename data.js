@@ -72,4 +72,58 @@ export const catsData = [
         affirmation: "Your body is asking for care.",
         source: "cat"
     },
+       {
+        emotionTags: ["insomniac"],
+        isGif: false,
+        image: "insomnia.jpeg",
+        alt: "A cat looking insomniac",
+        severity: "high",
+        affirmation: "Rest is productive. Try winding down.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["insomniac"],
+        isGif: false,
+        image: "insomnia1.jpeg",
+        alt: "A cat looking insomniac",
+        severity: "high",
+        affirmation: "Sleep struggles are real. Be kind to yourself.",
+        source: "cat"
+    },
+     {
+        emotionTags: ["relaxed"],
+        isGif: false,
+        image: "lazy.jpeg",
+        alt: "A cat looking lazy",
+        severity: "positive",
+        affirmation: "Rest is not laziness. It's necessary.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["scared"],
+        isGif: false,
+        image: "nervous.jpeg",
+        alt: "A cat looking nervous",
+        severity: "medium",
+        affirmation: "Fear means you're being brave.",
+        source: "cat"
+    },
+      {
+        emotionTags: ["sad"],
+        isGif: false,
+        image: "sad.jpeg",
+        alt: "A cat looking sad",
+        severity: "high",
+        affirmation: "Sadness is valid. You don't have to hide it.",
+        source: "cat"
+    },
+    {
+        emotionTags: ["sad", "moody"],
+        isGif: false,
+        image: "sad1.jpeg",
+        alt: "A cat looking sad",
+        severity: "high",
+        affirmation: "Tomorrow is a new day.",
+        source: "cat"
+    },
     
