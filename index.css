@@ -27,3 +27,18 @@ header {
 h1 { font-size: 26px; font-weight: 800; color: var(--saffron); letter-spacing: -0.5px; }
 h2 { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 400; }
 h3 { font-size: 17px; font-weight: 600; color: var(--mv); margin-bottom: 12px; }
+
+/* Stats */
+.stats-section { max-width: 1100px; margin: 20px auto 0; padding: 0 20px; }
+#stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.stat-card {
+    background: white;
+    border-radius: var(--r);
+    padding: 16px;
+    border-bottom: 3px solid var(--saffron);
+}
+.stat-card.warning { border-bottom-color: var(--tomato); background: #fff8ee; }
+.stat-number { font-size: 28px; font-weight: 800; color: var(--mv); }
+.stat-label { font-size: 12px; color: #888; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+.stat-icon { font-size: 24px; }
+
