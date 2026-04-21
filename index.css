@@ -15,7 +15,6 @@ body {
     line-height: 1.6;
 }
 
-
 header {
     background: var(--mv);
     padding: 20px 40px;
@@ -32,7 +31,12 @@ header {
 
 .pumpkin-img { width: 52px; }
 
-h1 { font-size: 26px; font-weight: 800; color: var(--saffron); letter-spacing: -0.5px; }
+h1 { 
+    font-size: 26px; 
+    font-weight: 800; 
+    color: var(--saffron); 
+    letter-spacing: -0.5px; }
+
 h2 { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* Hero Section */
@@ -81,7 +85,6 @@ h2 { font-size: 13px; color: rgba(255,255,255,0.45); font-weight: 400; letter-sp
     background: white;
     border-radius: var(--r);
     padding: 16px;
-    border-bottom: 3px solid var(--saffron);
 }
 .stat-card.warning { border-bottom-color: var(--tomato); background: #fff8ee; }
 .stat-number { font-size: 28px; font-weight: 800; color: var(--mv); }
@@ -187,18 +190,18 @@ footer {
   padding: 40px 20px;
   background: var(--mv); 
   color: white;
-  margin-top: 50px; /* Adds breathing room from the content above */
+  margin-top: 50px; 
 }
 
 footer p {
-  color: white; /* Base text in white */
+  color: white; 
   font-size: 14px;
-  opacity: 0.8; /* Makes it look slightly softer */
+  opacity: 0.8; 
 }
 
-/* Style the links inside the footer */
+
 footer a {
-  color: var(--saffron); /* Use saffron for the links only */
+  color: var(--saffron); 
   text-decoration: none;
   font-weight: 600;
   margin: 0 5px;

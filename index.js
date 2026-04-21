@@ -9,7 +9,6 @@ const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
 const moodHistoryContainer = document.getElementById("mood-history");
 const statsContainer = document.getElementById("stats-container");
 
-// ========== EXISTING FUNCTIONS (Your Original Code) ==========
 emotionRadios.addEventListener("change", highlightCheckedOption);
 memeModalCloseBtn.addEventListener("click", closeModal);
 getImageBtn.addEventListener("click", renderCat);
@@ -433,9 +432,7 @@ renderMoodHistory();
 updateMoodStats();
 
 // Make functions globally available
-// ========== INITIALIZE & GLOBAL ACCESS ==========
 
-// 1. Make all functions public for the HTML buttons
 window.exportAsCSV = exportAsCSV;
 window.exportAsJSON = exportAsJSON;
 window.clearAllData = clearAllData;
